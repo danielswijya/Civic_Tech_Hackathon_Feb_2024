@@ -1,0 +1,32 @@
+----> This is the README file for the Chug Project of our Hackathon from Feb 17 - 18
+
+🪙🪙🪙 AWARDED FOR MOST ENGAGING PITCH 🪙🪙🪙
+
+[Strategy] Platform: Healthcare
+----> What: Promote Better Awareness on water Intake for College Students
+----> Who: BU Students (potentially Massachusetts Area schools)    
+----> How: Create a Landing Page & Dashboard with HTML and CSS that is fun and super engaging for Boston University Student, while integrating a tracker on student's bottles
+----> Why: All 4 of us are actually real-life testimonies that we are not drinking enough water every day and that idea hit! BOOM!
+
+Links to Further Info: 
+
+Presentation: @  https://docs.google.com/presentation/d/1HUtWQOq_kVsMB9cmLtMQmtNRMN0N-ELjfXC4-u9ot6M/edit?usp=sharing
+DEVPOST Link: @  https://devpost.com/software/chug
+
+----> This project consist of 2 parts: 
+      O  1. Web App Landing Page
+      O  2. User Dashboard
+
+----> Features of Web App Landing Page: 
+      * Sign-Up Form for User Inputs on Background Info to suit recommended intake (....future back-end Integration with Jira)
+      * Info on Convenince $$$ conversion rates
+      * Button Link to Login and Current "Coin" Trackers of User
+      * Leaderboard amongst Students 
+      * Inspired from Free Templates that we customized according to our liking and mood of the page
+
+-----> Features of Dashboard: 
+      * Daily Graph Intake of User based on bottle tracker 
+      * Social Page 
+      * Inspired from Free Templates that we customized according to our liking and mood of the page
+
+Enjoy!!!
