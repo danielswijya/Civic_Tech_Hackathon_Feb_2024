@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hackathon Civic Tech</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">Chug</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#rewards" class="nav-item nav-link">Rewards</a>
+                        <a href="#leaderboard" class="nav-item nav-link">Leaderboard</a>
+                    </div>
+                    <a href="./argon-dashboard-master/dashboard.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block"> 0  | <img src = "img/free-coin-icon-794-thumb.png", width="20px", height="20px"> </a>
+                </div>
+            </nav>
+        </div>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="hero-text">
+                    <div class="container px-lg-5">
+                        <div class="row g-5">
+                            <div class="col-lg-8 text-center text-lg-start">
+                                <h2 class="text-white mb-4 animated slideInDown">Up Your Hydration To Up Your Points!! </h2>
+                                <p class="text-white pb-3 animated slideInDown">Hey Terriers! Track your H20 intake and e points to get <b><i>dining</i></b> and convenience credits!</p>
+                                <div class="col-lg-4 text-end">
+                                    <a href="#" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#surveyModal">Sign Up</a>
+                                </div>
+                                <div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalLabel">Welcome to Chug! Leave information below to set personalized goal.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Survey form content -->
+                                            <form id="surveyForm">
+                                                <!-- Add your survey questions here -->
+                                                <div class="mb-3">
+                                                    <label for="Name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="question1" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="BUID" class="form-label">BUID</label>
+                                                    <input type="text" class="form-control" id="question2" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Sex</label>
+                                                </div>
+                                                    <div>
+                                                        <input type="radio" id="male" name="sex" value="male" required>
+                                                        <label for="male">Male</label>
+                                                        <input type="radio" id="female" name="sex" value="female" required>
+                                                        <label for="female">Female</label>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                <div class="mb-3">
+                                                    <label for="Weight" class="form-label">Weight(kg)</label>
+                                                    <input type="text" class="form-control" id="question3" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exercise" class="form-label">On average, How many minutes do you exercise every day?</label>
+                                                    <input type="text" class="form-control" id="question4" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Health Condition" class="form-label">Have you experieced cold, fever, or vomiting in the past three days?</label>
+                                                    <input type="radio" id="yes" name="health" value="yes" required>
+                                                    <label for="Yes">Yes</label>
+                                                    <input type="radio" id="no" name="health" value="no" required>
+                                                    <label for="no">No</label>
+                                            </form>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" form="surveyForm" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Navbar & Hero End -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5" id="about">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">About Chug</h5>
+                        <h1 class="mb-4">Woot! Woot! College Freebies</h1>
+                        <p class="mb-4">Chug's goal is to promote BU student's health and well being by encouraging them to drink more water with our app.
+                        </p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <i class="fa fa-cogs fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-primary-gradient mb-0">Active Install</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <i class="fa fa-comments fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-secondary-gradient mb-0">Clients Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/locuni.png" width="400px", height="400px" style= "margin-left: 40px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+                <!-- Process Start -->
+                <div class="container-xxl py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <h5 class="text-primary-gradient fw-medium">How It Works</h5>
+                            <h1 class="mb-5">2 Easy Steps</h1>
+                        </div>
+                        <div class="row gy-5 gx-4 justify-content-center">
+                            <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                        <i class="fa fa-address-card fa-3x text-white"></i>
+                                    </div>
+                                    <h5 class="mt-4 mb-3">Setup Your Profile</h5>
+                                    <p class="mb-0">Fill in the Survey & Get Your Personalized Intake Recommendations</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                        <i class="fa fa-check fa-3x text-white"></i>
+                                    </div>
+                                    <h5 class="mt-4 mb-3">Chug and Get Your Reward(s)</h5>
+                                    <p class="mb-0">Drink EnpMake Sure to Log How Much Water Drinking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Process Start -->
+
+
+
+        <!-- Rewards Start -->
+        <div class="container-xxl py-5" id="rewards">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Rewards</h5>
+                    <h1 class="mb-5">Choose Your Prize</h1>
+                </div>
+                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="tab-content text-start">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Reward # 1</h4>
+                                            <span>10 Days in a Row</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div><img src="img/thor.png" alt="", width="130px", height="85px"></div>
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small> 5.00<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;"> Convenience</small>
+                                            </h1>
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">100 | <img src = "img/free-coin-icon-794-thumb.png", width="20px", height="20px"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Reward # 2</h4>
+                                            <span>20 Days in a Row</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div><img src="img/thor.png" alt="", width="130px", height="85px"></div>
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>15.00<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;"> Convenience</small>
+                                            </h1>
+                                            <a href="" class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4"> 200 | <img src = "img/free-coin-icon-794-thumb.png", width="20px", height="20px"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Premium Plan</h4>
+                                            <span>30 Days in a Row </span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div><img src="img/thor.png" alt="", width="130px", height="85px"></div>
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>30.00<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;"> Convenience</small>
+                                            </h1>
+                                            <a href="" class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4"> 300 | <img src = "img/free-coin-icon-794-thumb.png", width="20px", height="20px"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing End -->
+
+
+ 
+        <!-- Leaderboard Start -->
+        
+        <div class="container-xxl py-5" id="leaderboard">
+            <div class="content-container">
+                <h2 class="text-primary-gradient fw-medium">Leaderboard</h2>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Leaderboard</title>
+                        </head>
+                    <body>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Challenge Streak</th>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Bill</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Crystal</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Penny</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                    </body>
+                    </html>
+            </div>
+        </div>
+        <!-- Leaderboard End -->
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>617 Commonwealth Avenue, Boston, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+1 617-369-1357</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@bu.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

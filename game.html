@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Water to the Cup Game</title>
+<style>
+    /* Style for the cup */
+    .cup {
+        width: 100px;
+        height: 200px;
+        background-color: #f3f3f3;
+        border: 2px solid #000;
+        position: relative;
+        margin: 20px auto;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    /* Style for the water */
+    #water {
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom;
+        transition: height 0.5s ease-in-out;
+    }
+
+    /* Style for the dotted lines */
+    .dotted-lines {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+        background-size: 100% 20px; /* Adjust the size of the dotted lines */
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    /* Style for the button */
+    #addWaterButton {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Style for the water level label */
+    #waterLevelLabel {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* Style for the label container */
+    .label-container {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+</head>
+<body>
+<div class="label-container">
+    <div class="cup">
+        <div id="water" style="height: 0;"></div>
+        <div class="dotted-lines"></div>
+    </div>
+    <div id="waterLevelLabel">Water Level: Low</div>
+</div>
+<button id="addWaterButton">Add Water</button>
+
+<script>
+    // Add event listener to the button
+    document.getElementById("addWaterButton").addEventListener("click", function() {
+        addWater();
+    });
+
+    // Function to add water to the cup
+    function addWater() {
+        var water = document.getElementById("water");
+        var currentHeight = water.clientHeight;
+        var newHeight = currentHeight + 20; // Increase water level by 20px
+
+        // Limit the water level to the cup's height
+        if (newHeight > 200) {
+            newHeight = 200;
+        }
+
+        water.style.height = newHeight + "px";
+
+        // Update water level label
+        var waterLevelLabel = document.getElementById("waterLevelLabel");
+        if (newHeight < 100) {
+            waterLevelLabel.innerHTML = "Water Level: Low";
+        } else {
+            waterLevelLabel.innerHTML = "Water Level: High";
+        }
+    }
+</script>
+</body>
+</html>
